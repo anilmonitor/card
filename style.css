@@ -1,0 +1,78 @@
+/* RESET + GLOBAL */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef1f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* CARD */
+.card {
+    width: 90%;
+    max-width: 380px;
+    height: 400px;               /* ✔ Fixed height */
+    background: #fff;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    overflow: hidden;            /* ✔ Prevent content from overflowing */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* ✔ Space used cleanly */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Heading */
+.card h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Paragraphs */
+.card p {
+    font-size: 14px;
+    margin: 8px 0;
+    color: #555;
+}
+
+/* Image — resized to match 400px card */
+.card img {
+    width: 100%;
+    height: 180px;           /* ✔ Adjusted to fit inside 400px height */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .card {
+        max-width: 95%;
+        height: 400px;       /* ✔ Still fixed height on phones */
+        padding: 18px;
+    }
+
+    .card h1 {
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 13px;
+    }
+
+    .card img {
+        height: 160px;
+    }
+}
